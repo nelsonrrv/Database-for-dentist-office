@@ -1,0 +1,77 @@
+<html>  
+<head>  
+    <title>Control de pacientes OD</title>  
+
+    <link rel = "stylesheet" type = "text/css" href = "style.css">   
+</head>  
+<body>  
+    <div id = "frm">  
+        <h1>Registrar paciente</h1>  
+        <form name="f1" action = "nuevotrata.php" onsubmit = "return validation()" method = "POST">  
+            <p>  
+                <label> Id de Odontologo:</label>  
+                <input type = "text" id ="id_od" name  = "id_od" />  
+            </p>  
+            <p>  
+                <label> CI: </label>  
+                <input type = "number" id ="ci" name  = "ci" />  
+            </p>  
+            <p>  
+                <label> Fecha: </label>  
+                <input type = "date" id ="fecha" name  = "fecha" />  
+            </p>
+            <p>  
+                <label> Detalle: </label>  
+                <input type = "text" id ="detalle" name  = "detalle" /> 
+
+                <p>  
+                    <label> Monto: </label>  
+                    <input type = "number" id ="monto" name  = "monto" />  
+                </p> 
+            </p>
+            <p>     
+                <input type =  "submit" id = "btn" value = "Guardar" />  
+            </p>  
+        </form>  
+    </div>  
+    
+    <script>  
+            function validation()  
+            {  
+                var id=document.f1.id_od.value;  
+                var ps=document.f1.ci.value;
+                var id=document.f1.fecha.value;  
+                var ps=document.f1.detalle.value; 
+                var ps=document.f1.monto.value; 
+
+                if(id_od.length=="" && ci.length=="" && fecha.length==""  && detalle.length=="" && monto.length=="" ) {  
+                    alert("Campos vacios");  
+                    return false;  
+                }  
+                else  
+                {  
+                    if(id_od.length=="") {  
+                        alert("Llena el campo Id de Odontologo");  
+                        return false;  
+                    }   
+                    if (ci.length=="") {  
+                    alert("Llena el campo CI");  
+                    return false;  
+                    }  
+                    if (fecha.length=="") {  
+                    alert("Llena el campo Fecha");  
+                    return false;  
+                    } 
+                    if (detalle.length=="") {  
+                    alert("Llena el campo Detalle");  
+                    return false;  
+                    } 
+                    if (monto.length=="") {  
+                    alert("Llena el campo Monto");  
+                    return false;  
+                    } 
+                }                             
+            }  
+        </script>  
+</body>     
+</html>  
